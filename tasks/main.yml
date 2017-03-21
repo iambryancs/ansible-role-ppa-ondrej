@@ -1,0 +1,12 @@
+---
+- name: Check if ondrej/php PPA is already present
+  stat:
+    path: "{{ ondrej_sourcelist_path }}"
+  register: ondrej_sourcelist_status
+
+- name: Add ondrej/php PPA
+  apt_repository:
+    repo: 'ppa:ondrej/php'
+    state: 'present'
+    update_cache: yes
+  when: ondrej_sourcelist_status.stat.exists == False

@@ -1,0 +1,27 @@
+# meta/main.yml
+# Author: iambryancs
+---
+galaxy_info:
+  author: iambryancs
+  description: Ansible role ondrej/php ppa for Debian/Ubuntu
+  company: "PowerStormTech"
+  license: "license (MIT)"
+  min_ansible_version: 1.8
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    - utopic
+    - vivid
+    - wily
+    - xenial
+    - yakkety
+  - name: Debian
+    - squeeze
+    - stretch
+    - wheezy
+  galaxy_tags:
+    - ondrej
+    - ppa
+    - packaging
+dependencies: []

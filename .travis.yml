@@ -1,0 +1,16 @@
+---
+services: docker
+
+before_install:
+  # Build image to use
+  - 'docker build -t iambryancs/ansible-test-image -f tests/Dockerfile .'
+
+script:
+  # Basic role syntax check
+  - 'docker run -t --rm iambryancs/ansible-test-image ansible-playbook /etc/ansible/roles/iambryancs.ppa-ondrej/tests/test.yml --syntax-check'
+
+  # Test role
+  - 'docker run -t --rm iambryancs/ansible-test-image ansible-playbook /etc/ansible/roles/iambryancs.ppa-ondrej/tests/test.yml'
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

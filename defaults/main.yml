@@ -1,0 +1,2 @@
+---
+ondrej_sourcelist_path: "/etc/apt/sources.list.d/ppa_ondrej_php_{{ansible_distribution_release}}.list"
