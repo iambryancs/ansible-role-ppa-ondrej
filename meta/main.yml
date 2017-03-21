@@ -17,6 +17,7 @@ galaxy_info:
     - xenial
     - yakkety
   - name: Debian
+    versions:
     - squeeze
     - stretch
     - wheezy
